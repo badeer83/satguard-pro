@@ -1,0 +1,1 @@
+{"name":"satguard-backend","version":"2.0.0","main":"server.js","scripts":{"start":"node server.js"},"dependencies":{"express":"^4.18.0","cors":"^2.8.5","helmet":"^7.0.0","morgan":"^1.10.0","dotenv":"^16.0.0","jsonwebtoken":"^9.0.0","bcryptjs":"^2.4.3","mysql2":"^3.0.0","ioredis":"^5.0.0","mqtt":"^4.3.0"}}

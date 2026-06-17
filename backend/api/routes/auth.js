@@ -1,0 +1,1 @@
+const express=require('express');const router=express.Router();const jwt=require('jsonwebtoken');router.post('/login',async(req,res)=>{try{const t=jwt.sign({user:req.body.username},process.env.JWT_SECRET||'secret',{expiresIn:'7d'});res.json({success:true,token:t})}catch(e){res.status(500).json({error:e.message})}});module.exports=router;

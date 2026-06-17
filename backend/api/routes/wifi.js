@@ -1,0 +1,1 @@
+const express=require('express');const router=express.Router();router.get('/scan',(req,res)=>res.json({success:true,data:[]}));router.get('/status',(req,res)=>res.json({connected:false}));module.exports=router;
