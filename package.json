@@ -1,0 +1,15 @@
+{
+"name": "satguard-pro",
+"version": "2.0.0",
+"description": "نظام إدارة أجهزة الاستقبال الفضائية والـ IPTV المتكامل",
+"main": "backend/server.js",
+"scripts": {
+"start": "docker-compose up -d",
+"stop": "docker-compose down",
+"logs": "docker-compose logs -f",
+"build": "docker-compose build"
+},
+"keywords": ["satellite", "iptv", "stb", "enigma2", "oscam"],
+"author": "badeer83 ",
+"license": "MIT"
+}

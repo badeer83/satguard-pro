@@ -1,0 +1,32 @@
+version: '3.8'
+services:
+mysql:
+image: mysql:8.0
+container_name: satguard-mysql
+environment:
+MYSQL_ROOT_PASSWORD: ${DB_ROOT_PASSWORD}
+MYSQL_DATABASE: satguard
+volumes:
+- mysql_data:/var/lib/mysql
+ports:
+- "3306:3306"
+redis:
+image: redis:7-alpine
+container_name: satguard-redis
+ports:
+- "6379:6379"
+backend:
+build: ./backend
+container_name: satguard-backend
+ports:
+- "3000:3000"
+depends_on:
+- mysql
+- redis
+frontend:
+build: ./frontend
+container_name: satguard-frontend
+ports:
+- "80:80"
+volumes:
+mysql_data:
